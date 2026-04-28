@@ -7,6 +7,7 @@ import { Contact } from "./components/pages/Contact";
 import { Home } from "./components/pages/Home";
 import { Product } from "./components/pages/Product";
 import { Products } from "./components/pages/Products";
+import { Cart } from "./components/pages/Cart";
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/productos" element={<Products/>} />
+          <Route path="/carrito" element={<Cart/>} />
           <Route path="/producto/:id" element={<Product/>} />
           <Route path="/contacto" element={<Contact/>} />
         </Routes>
