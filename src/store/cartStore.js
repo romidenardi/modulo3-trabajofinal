@@ -8,7 +8,7 @@ export const useCartStore = create ((set, get) => ({
 
   //Métodos
 
-  addProducts: (product) => set ((state) => {
+  addProduct: (product) => set ((state) => {
 
     const exists = state.items.find ((item) => item.id === product.id);
 
@@ -32,7 +32,7 @@ export const useCartStore = create ((set, get) => ({
 
   changeQuantity: (productId, quantity) => set ((state) => ({
 
-    items: state.items.map ((item) =>  item.id === product.id ? {...item, quantity: quantity} : item,),
+    items: state.items.map ((item) =>  item.id === productId ? {...item, quantity: quantity} : item,),
 
   })),
 

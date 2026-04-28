@@ -46,7 +46,7 @@ export const Products = () =>  {
           <div key={product.id}>
             <span>{product.name}</span>
             <span>{product.price}</span>
-            <button onClick={() => addProduct()}>Agregar</button>
+            <button onClick={() => addProduct(product)}>Agregar</button>
           </div>
         ))}
       </div>

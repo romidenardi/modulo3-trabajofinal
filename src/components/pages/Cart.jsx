@@ -5,14 +5,13 @@ import { useCartStore } from "../../store/cartStore";
 export const Cart = () => {
 
   const items = useCartStore ((state) => state.items);
-  const addProducts = useCartStore ((state) => state.addProducts);
   const deleteProduct = useCartStore ((state) => state.deleteProduct);
   const changeQuantity = useCartStore ((state) => state.changeQuantity);
   const emptyCart = useCartStore ((state) => state.emptyCart);
   const getItemsTotal = useCartStore ((state) => state.getItemsTotal);
   const getPriceTotal = useCartStore ((state) => state.getPriceTotal);
 
-  if (items.lenght === 0) {
+if (items.length === 0) {
     return (
       <div>
         <h3>Tu carrito</h3>
@@ -31,14 +30,14 @@ export const Cart = () => {
             <p>{item.quantity}</p>
             <button onClick={() => changeQuantity (item.id, item.quantity + 1)}>+1</button> 
             <p>$ {item.quantity * item.price}</p>
-            <button onClick={deleteProduct}>Eliminar</button>           
+            <button onClick={() => deleteProduct(item.id)}>Eliminar</button>
           </div>
         ))}
         <div>
           <strong>Total: ${getPriceTotal()}</strong>
         </div>
         <div>
-          <button onClick={emptyCart}></button>
+          <button onClick={emptyCart}>Vaciar carrito</button>
         </div>
       </div>
   );
