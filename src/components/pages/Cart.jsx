@@ -25,7 +25,7 @@ if (items.length === 0) {
         <h3>Tu carrito ({getItemsTotal()} productos)</h3>
         {items.map((item) => (
           <div key={item.id}>
-            <h5>{item.name}</h5>
+            <h5>{item.title}</h5>
             <button onClick={() => changeQuantity (item.id, item.quantity - 1)}>-1</button>
             <p>{item.quantity}</p>
             <button onClick={() => changeQuantity (item.id, item.quantity + 1)}>+1</button> 
