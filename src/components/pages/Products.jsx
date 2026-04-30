@@ -35,14 +35,16 @@ export const Products = () =>  {
         <div>
           {productList.map((product) => (
             <div key={product.id}>
-              <span>{product.title}</span>
-              <span>{product.price}</span>
+              <h2>{product.title}</h2>
+              <p>${product.price}</p>
+              <img src={product.images?.[0]} alt={product.title} width={200} />
+              <p>{product.description}</p>
               <button>
-                <Link to={`/producto?id${product.id}`}>Ver detalle</Link>
+                <Link to={`/producto?id=${product.id}`}>Ver detalle</Link>
               </button>      
               <button onClick={() => addProduct({
                 id:product.id,
-                tittle:product.title,
+                title:product.title,
                 price:product.price,
               })}>Agregar</button>
             </div>
