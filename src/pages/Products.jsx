@@ -1,6 +1,6 @@
 import React from "react";
-import { useFetch } from "../../hooks/useFetch";
-import { useCartStore } from "../../store/cartStore";
+import { useFetch } from "../hooks/useFetch";
+import { useCartStore } from "../store/cartStore";
 import { Link } from "react-router-dom";
 
 const API_URL = `${import.meta.env.VITE_API_BASE_URL}/products/?categoryId=2`;

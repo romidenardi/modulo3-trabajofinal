@@ -1,8 +1,8 @@
 import React from "react";
 import { useSearchParams} from "react-router-dom";
-import { useFetch } from "../../hooks/useFetch";
+import { useFetch } from "../hooks/useFetch";
 import { Link } from "react-router-dom";
-import { useCartStore } from "../../store/cartStore";
+import { useCartStore } from "../store/cartStore";
 
 export const Product = () => {
 
