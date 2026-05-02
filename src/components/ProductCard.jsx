@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const ProductCard = ({product, onAdd}) => {
   return (
     <div>
-      <h2>{product.title}</h2>
+      <h3>{product.title}</h3>
       <p>${product.price}</p>
       <img src={product.images?.[0]} alt={product.title} width={200} />
       <p>{product.description}</p>

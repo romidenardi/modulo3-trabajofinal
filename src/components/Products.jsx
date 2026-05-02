@@ -3,6 +3,7 @@ import { useFetch } from "../hooks/useFetch";
 import { useCartStore } from "../store/cartStore";
 import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
+import { categories } from "../helpers/categories";
 
 export const Products = ({category}) =>  {
 
@@ -21,8 +22,7 @@ export const Products = ({category}) =>  {
     if(loading) {
       return (
         <div>
-          <h3>Productos</h3>
-          <p>Cargando</p>
+          <p>Cargando productos...</p>
         </div>
       );
     }
@@ -30,7 +30,6 @@ export const Products = ({category}) =>  {
     if(error) {
       return (
         <div>
-          <h3>Productos</h3>
           <p>Error al cargar los productos</p>
         </div>
       );
@@ -38,7 +37,7 @@ export const Products = ({category}) =>  {
 
     return (
       <div>
-        <h3>Productos</h3>
+        <h2>{getCategoryLabel(category)}</h2>
         <div>
           {productList.map((product) => (
               <ProductCard

@@ -10,6 +10,9 @@ import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { Product } from "./pages/Product";
 
+import "./styles/variables.css";
+import "./styles/general.css";
+
 function App() {  
   return (
     <BrowserRouter>

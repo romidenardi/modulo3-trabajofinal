@@ -13,7 +13,7 @@ export const Cart = () => {
 if (items.length === 0) {
     return (
       <div>
-        <h3>Tu carrito</h3>
+        <h2>Tu carrito</h2>
         <p>Aún no agregaste productos</p>
       </div>
     );
@@ -21,7 +21,7 @@ if (items.length === 0) {
 
   return (
       <div>
-        <h3>Tu carrito ({getItemsTotal()} productos)</h3>
+        <h2>Tu carrito ({getItemsTotal()} productos)</h2>
         {items.map((item) => (
           <div key={item.id}>
             <h5>{item.title}</h5>
