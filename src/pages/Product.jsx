@@ -20,7 +20,9 @@ export const Product = () => {
       return (
         <div>
           <p>Producto no encontrado</p>
-          <Link to="/">Volver a la home</Link>
+          <Link to="/" className={styles.breadcrumb}>
+            ← Home
+          </Link>
         </div>
       );
     }

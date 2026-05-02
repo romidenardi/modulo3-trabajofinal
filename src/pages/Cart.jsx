@@ -16,9 +16,11 @@ export const Cart = () => {
 if (items.length === 0) {
     return (
       <div className={styles.empty}>
-        <h2 className={styles.title}>Tu carrito</h2>
-        <p>Aún no agregaste productos</p>
-        <Link to="/">Volver a la home</Link>
+        <h2 className={styles.titleEmpty}>Tu carrito</h2>
+        <p className={styles.textEmpty}>Aún no agregaste productos</p>
+        <Link to="/" className={styles.breadcrumb}>
+          ← Home
+        </Link>
       </div>
     );
   }
@@ -28,7 +30,7 @@ if (items.length === 0) {
     <div className={styles.container}>
 
       <h2 className={styles.title}> </h2>
-      <p>Tu carrito tiene ({getItemsTotal()} productos)</p>        
+      <p>Tu carrito tiene {getItemsTotal()} producto/s</p>        
 
       <div className={styles.list}>
 
@@ -38,7 +40,12 @@ if (items.length === 0) {
             <h4 className={styles.itemTitle}>{item.title}</h4>
 
             <div className={styles.controls}>
-              <button onClick={() => changeQuantity(item.id, item.quantity - 1)}>-</button>
+              <button
+                disabled={item.quantity <= 1}
+                onClick={() => changeQuantity(item.id, item.quantity - 1)}
+              >
+                -
+              </button>
               <span>{item.quantity}</span>
               <button onClick={() => changeQuantity(item.id, item.quantity + 1)}>+</button>
             </div>

@@ -33,6 +33,9 @@ export const Products = ({category}) =>  {
       return (
         <div>
           <p>Error al cargar los productos</p>
+          <Link to="/" className={styles.breadcrumb}>
+            ← Home
+          </Link>
         </div>
       );
     }

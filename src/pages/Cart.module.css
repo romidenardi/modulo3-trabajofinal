@@ -4,8 +4,11 @@
   padding: 20px;
 }
 
-.title {
+.title, .titleEmpty {
   margin-bottom: 20px;
+}
+.titleEmpty, .textEmpty {
+  margin-left: 10px;
 }
 
 .list {
@@ -38,6 +41,11 @@
   cursor: pointer;
 }
 
+.controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .price {
   font-weight: bold;
   color: var(--accent);
@@ -64,4 +72,17 @@
   padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.breadcrumb:hover {
+  color: var(--primary);
 }

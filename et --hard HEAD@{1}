@@ -1,0 +1,13 @@
+[33mb86b96a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m1850971[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{1}: commit: Navegación y estilos
+[33mb86b96a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{2}: commit: Estilos bases y categorías
+[33m7a9abdd[m HEAD@{3}: commit: Estructura del ecommerce
+[33mf3fdbc2[m HEAD@{4}: commit: Organización
+[33mdb794dd[m HEAD@{5}: commit: Trabajo en clase segunda parte
+[33mb53a8af[m HEAD@{6}: commit: Trabajo en clase primera parte
+[33m3684927[m HEAD@{7}: commit: Correcciones
+[33m26cfb4d[m HEAD@{8}: commit: Cart store, products y cart
+[33m83ab064[m HEAD@{9}: commit: Estructura base
+[33m7b8b768[m HEAD@{10}: Branch: renamed refs/heads/main to refs/heads/main
+[33m7b8b768[m HEAD@{12}: Branch: renamed refs/heads/master to refs/heads/main
+[33m7b8b768[m HEAD@{14}: commit (initial): Inicialización del proyecto
