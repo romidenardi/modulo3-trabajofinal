@@ -1,7 +1,6 @@
 import React from "react";
 import { useCartStore } from "../store/cartStore";
 
-
 export const Cart = () => {
 
   const items = useCartStore ((state) => state.items);
