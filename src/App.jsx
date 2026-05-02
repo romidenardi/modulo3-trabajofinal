@@ -8,6 +8,7 @@ import { Cart } from "./pages/Cart";
 import { Category } from "./pages/Category";
 import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
+import { NotFound } from "./pages/NotFound";
 import { Product } from "./pages/Product";
 
 import "./styles/variables.css";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/carrito" element={<Cart/>}/>
           <Route path="/producto" element={<Product/>}/>
           <Route path="/contacto" element={<Contact/>}/>
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       <Footer/>
     </BrowserRouter>
