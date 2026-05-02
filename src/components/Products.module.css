@@ -4,20 +4,3 @@
   gap: 20px;
   margin-bottom: 25px;
 }
-
-.categoryTitle {
-  margin-left: 10px;
-}
-
-.breadcrumb {
-  font-size: 0.8rem;
-  color: var(--text-light);
-  text-decoration: none;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-}
-
-.breadcrumb:hover {
-  color: var(--primary);
-}

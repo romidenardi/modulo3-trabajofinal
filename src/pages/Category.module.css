@@ -1,0 +1,29 @@
+.categoryTitle {
+  margin-left: 10px;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.breadcrumb:hover {
+  color: var(--primary);
+}
+
+.input {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
