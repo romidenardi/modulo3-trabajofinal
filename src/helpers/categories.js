@@ -1,7 +1,7 @@
 export const categories = [
   { label: "Belleza", value: "beauty" },
   { label: "Perfumes", value: "fragrances" },
-  { label: "Cuidado de la piel", value: "skincare" },
+  { label: "Cuidado de la piel", value: "skin-care" },
   { label: "Gafas de sol", value: "sunglasses" },
   { label: "Carteras", value: "womens-bags" },
   { label: "Joyas", value: "womens-jewellery" },

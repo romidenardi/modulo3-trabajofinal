@@ -1,0 +1,93 @@
+.menu {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    display: none;             
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 12px;
+  }
+
+  .active {
+    display: flex;              
+  }
+
+  .toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .toggle {
+    display: none;
+  }
+}
+
+.cartContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.cartBag {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.1));
+}
+
+.cartBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--accent);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white;
+}
+
+.toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent); 
+}
+
+.toggle:hover {
+  color: var(--primary);
+}
+
+.menu a {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.category {
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+.footerDiv {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-soft);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footerText {
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,30 +1,46 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCartStore } from "../store/cartStore";
 import { categories } from "../helpers/categories";
+import bag from "../assets/shop-bag.png";
+import styles from "./Nav.module.css";
 
 export const Nav = () => {
 
   const items = useCartStore((state) => state.items);
   const getItemsTotal = useCartStore((state) => state.getItemsTotal);
   const total = getItemsTotal();
+  const [open, setOpen] = useState(false);
 
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/contacto">Contacto</Link>
-        <Link to="/categoria/beauty">Belleza</Link>
-        <Link to="/categoria/fragrances">Perfumes</Link>
-        <Link to="/categoria/skin-care">Skincare</Link>
-        <Link to="/categoria/sunglasses">Gafas de sol</Link>
-        <Link to="/categoria/womens-bags">Carteras</Link>
-        <Link to="/categoria/womens-jewellery">Joyas</Link>
-        {categories.map((cat) => (
-          <Link key={cat.value} to={`/categoria/${cat.value}`}>
+      <nav className={styles.nav}>
+        <button 
+          className={styles.toggle}
+          onClick={() => setOpen(!open)}
+        >
+          ☰
+        </button>
+        <div className={`${styles.menu} ${open ? styles.active : ""}`}>
+          <Link to="/" onClick={() => setOpen(false)}>Home</Link>      
+          {categories.map((cat) => (
+            <Link className={styles.category} key={cat.value} to={`/categoria/${cat.value}`}>
             {cat.label}
-          </Link>
-        ))}
+            </Link>
+          ))}
+          <Link to="/contacto">Contacto</Link>
+          <Link to="/carrito" className={styles.cartLink}>
+            <div className={styles.cartContainer}>
+              <img src={bag} alt="Carrito" className={styles.cartBag}/>
+              {total > 0 && (
+                <span className={styles.cartBadge}>
+                  {total > 9 ? "9+" : total}
+                </span>
+              )}
+            </div>
+          </Link>          
+        </div>        
       </nav>
     </div>
   );

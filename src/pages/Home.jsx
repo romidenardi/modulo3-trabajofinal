@@ -7,7 +7,6 @@ export const Home = () => {
     <div>
       {categories.map((cat) => (
         <div key={cat.value}>
-          <h2>{cat.label}</h2>
           <Products category={cat.value}/>
         </div>
       ))}

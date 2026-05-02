@@ -1,0 +1,12 @@
+.headerDiv {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-soft);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.headerImg {
+ width:120px;
+}

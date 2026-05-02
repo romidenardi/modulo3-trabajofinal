@@ -4,6 +4,8 @@ import { useCartStore } from "../store/cartStore";
 import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
 import { categories } from "../helpers/categories";
+import { getCategoryLabel } from "../helpers/categories";
+import styles from "./Products.module.css";
 
 export const Products = ({category}) =>  {
 
@@ -37,8 +39,8 @@ export const Products = ({category}) =>  {
 
     return (
       <div>
-        <h2>{getCategoryLabel(category)}</h2>
-        <div>
+        <h2 className={styles.categoryTitle}>{getCategoryLabel(category)}</h2>
+        <div className={styles.grid}>
           {productList.map((product) => (
               <ProductCard
               key={product.id}
