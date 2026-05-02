@@ -67,13 +67,16 @@ if (items.length === 0) {
 
       <div className={styles.summary}>
         <strong>Total: {formatPrice(getPriceTotal())}</strong>
-
+        
         <button
           className={styles.clear}
           onClick={emptyCart}
         >
           Vaciar carrito
         </button>
+        
+        <Link className={styles.purchase} to="/checkout">Finalizar compra</Link>
+
       </div>
 
     </div>

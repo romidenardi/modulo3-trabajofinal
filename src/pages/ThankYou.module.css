@@ -1,0 +1,25 @@
+.title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.breadcrumb:hover {
+  color: var(--primary);
+}
