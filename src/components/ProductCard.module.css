@@ -2,12 +2,11 @@
   background-color: var(--bg);
   border-radius: 12px;
   padding: 16px;
-  width: 220px;
-
+  width: 100%;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.2s;
 }

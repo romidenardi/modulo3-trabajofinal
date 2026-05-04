@@ -52,8 +52,6 @@
 }
 
 .addButton {
-  margin-top: 10px;
-  margin-left: 10px;
   background-color: var(--primary);
   color: white;
   border: none;
@@ -91,4 +89,17 @@
 
 .quantity {
   padding: 10px;
+}
+
+.controls {
+  display: flex;
+  align-content: center;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }  
 }

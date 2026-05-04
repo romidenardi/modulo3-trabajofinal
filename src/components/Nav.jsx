@@ -14,35 +14,39 @@ export const Nav = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
+    <div>      
       <nav className={styles.nav}>
+
         <button 
           className={styles.toggle}
           onClick={() => setOpen(!open)}
         >
           ☰
         </button>
+
         <div className={`${styles.menu} ${open ? styles.active : ""}`}>
-          <Link to="/" onClick={() => setOpen(false)}>Home</Link>      
+          <Link to="/">Home</Link>      
           {categories.map((cat) => (
-            <Link className={styles.category} key={cat.value} to={`/categoria/${cat.value}`}>
-            {cat.label}
+            <Link className={styles.categoriesMenu} key={cat.value} to={`/categoria/${cat.value}`}>
+              {cat.label}
             </Link>
           ))}
           <Link to="/contacto">Contacto</Link>
-          <Link to="/carrito" className={styles.cartLink}>
-            <div className={styles.cartContainer}>
-              <img src={bag} alt="Carrito" className={styles.cartBag}/>
-              {total > 0 && (
-                <span className={styles.cartBadge}>
-                  {total > 9 ? "9+" : total}
-                </span>
-              )}
-            </div>
-          </Link>          
-        </div>        
-      </nav>
+        </div>
+
+        <Link to="/carrito" className={styles.cartLink}>
+          <div className={styles.cartContainer}>
+            <img src={bag} alt="Carrito" className={styles.cartBag}/>
+            {total > 0 && (
+              <span className={styles.cartBadge}>
+                {total > 9 ? "9+" : total}
+              </span>
+            )}
+          </div>
+        </Link>
+
+      </nav> 
     </div>
   );
-
+  
 };

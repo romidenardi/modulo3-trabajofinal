@@ -61,17 +61,19 @@ export const Product = () => {
             <p className={styles.price}>{formatPrice(product.price)}</p>
             <p className={styles.description}>{product.description}</p>
             <div className={styles.controls}>
-              <button className={styles.button}
-                disabled={quantity <= 1}
-                onClick={() => setQuantity(quantity - 1)}
-              >
-                -
-              </button>
-              <span className={styles.quantity}>{quantity}</span>
-              <button className={styles.button}
-                onClick={() => setQuantity(quantity + 1)}>
-                +
-              </button>
+              <div>
+                <button className={styles.button}
+                  disabled={quantity <= 1}
+                  onClick={() => setQuantity(quantity - 1)}
+                >
+                  -
+                </button>
+                <span className={styles.quantity}>{quantity}</span>
+                <button className={styles.button}
+                  onClick={() => setQuantity(quantity + 1)}>
+                  +
+                </button>
+              </div>
               <button
                 className={styles.addButton}
                 onClick={() => addProduct(product, quantity)}

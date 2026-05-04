@@ -68,6 +68,7 @@
 @media (max-width: 768px) {
   .summary{
     flex-direction: column;
+    gap: 10px;
   }  
 }
 
