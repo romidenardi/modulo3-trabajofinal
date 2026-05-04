@@ -51,7 +51,7 @@
   line-height: 1.5;
 }
 
-.button {
+.addButton {
   margin-top: 10px;
   background-color: var(--primary);
   color: white;
@@ -62,7 +62,7 @@
   transition: 0.2s;
 }
 
-.button:hover {
+.addButton:hover {
   background-color: var(--primary-dark);
 }
 
@@ -77,4 +77,17 @@
 
 .breadcrumb:hover {
   color: var(--primary);
+}
+
+.button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.quantity {
+  padding: 10px;
 }

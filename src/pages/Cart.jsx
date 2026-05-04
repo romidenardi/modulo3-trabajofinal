@@ -40,14 +40,14 @@ if (items.length === 0) {
             <h4 className={styles.itemTitle}>{item.title}</h4>
 
             <div className={styles.controls}>
-              <button
+              <button className={styles.button}
                 disabled={item.quantity <= 1}
                 onClick={() => changeQuantity(item.id, item.quantity - 1)}
               >
                 -
               </button>
               <span>{item.quantity}</span>
-              <button onClick={() => changeQuantity(item.id, item.quantity + 1)}>+</button>
+              <button className={styles.button} onClick={() => changeQuantity(item.id, item.quantity + 1)}>+</button>
             </div>
 
             <p className={styles.price}>

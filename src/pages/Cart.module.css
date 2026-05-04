@@ -95,3 +95,12 @@
 .breadcrumb:hover {
   color: var(--primary);
 }
+
+.button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}

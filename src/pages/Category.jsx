@@ -61,13 +61,7 @@ export const Category = () => {
 
       <Products
         products={filtered}
-        onAdd={(p) =>
-          addProduct({
-            id: p.id,
-            title: p.title,
-            price: p.price,
-          })
-        }
+        onAdd={addProduct}
       />
     </div>
   );

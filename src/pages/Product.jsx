@@ -1,5 +1,6 @@
 import React from "react";
 import { useSearchParams} from "react-router-dom";
+import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { Link } from "react-router-dom";
 import { useCartStore } from "../store/cartStore";
@@ -15,6 +16,7 @@ export const Product = () => {
   const { data: product, loading, error } = useFetch(API_URL);
 
   const addProduct = useCartStore ((state) => state.addProduct);
+  const [quantity, setQuantity] = useState(1);
 
     if(!id) {
       return (
@@ -58,18 +60,25 @@ export const Product = () => {
             <h2 className={styles.title}>{product.title}</h2>
             <p className={styles.price}>{formatPrice(product.price)}</p>
             <p className={styles.description}>{product.description}</p>
-            <button
-              className={styles.button}
-              onClick={() =>
-                addProduct({
-                  id: product.id,
-                  title: product.title,
-                  price: product.price,
-                })
-              }
-            >
-              Agregar al carrito
-            </button>
+            <div className={styles.controls}>
+              <button className={styles.button}
+                disabled={quantity <= 1}
+                onClick={() => setQuantity(quantity - 1)}
+              >
+                -
+              </button>
+              <span className={styles.quantity}>{quantity}</span>
+              <button className={styles.button}
+                onClick={() => setQuantity(quantity + 1)}>
+                +
+              </button>
+              <button
+                className={styles.addButton}
+                onClick={() => addProduct(product, quantity)}
+              >
+                Agregar al carrito
+              </button>
+            </div>
           </div>
         </div>
       </div>
