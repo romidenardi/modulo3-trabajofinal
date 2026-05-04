@@ -66,6 +66,7 @@ if (items.length === 0) {
       </div>
 
       <div className={styles.summary}>
+        
         <strong>Total: {formatPrice(getPriceTotal())}</strong>
         
         <button
