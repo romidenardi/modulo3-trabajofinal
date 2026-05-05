@@ -12,5 +12,5 @@ export const ThankYou = () => {
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};

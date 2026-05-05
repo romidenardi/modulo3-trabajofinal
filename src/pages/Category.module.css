@@ -28,3 +28,10 @@
   outline: none;
   border-color: var(--primary);
 }
+
+.empty {
+  margin-left: 10px;
+  margin-top: 20px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}

@@ -16,14 +16,12 @@ export const Nav = () => {
   return (
     <div>      
       <nav className={styles.nav}>
-
         <button 
           className={styles.toggle}
           onClick={() => setOpen(!open)}
         >
           ☰
         </button>
-
         <div className={`${styles.menu} ${open ? styles.active : ""}`}>
           <Link to="/">Home</Link>      
           {categories.map((cat) => (
@@ -33,7 +31,6 @@ export const Nav = () => {
           ))}
           <Link to="/contacto">Contacto</Link>
         </div>
-
         <Link to="/carrito" className={styles.cartLink}>
           <div className={styles.cartContainer}>
             <img src={bag} alt="Carrito" className={styles.cartBag}/>
@@ -44,7 +41,6 @@ export const Nav = () => {
             )}
           </div>
         </Link>
-
       </nav> 
     </div>
   );

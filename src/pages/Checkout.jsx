@@ -29,18 +29,14 @@ export const Checkout = () => {
     navigate("/gracias");
   }
 
-  return (
-    
+  return (    
     <div className={styles.container}>
-
       <div className={styles.container}>
         <h2 className={styles.title}>¡Finalizá tu compra!</h2>
         <p className={styles.data}>Cantidad de productos: {getItemsTotal()}</p>
         <p className={styles.data}>Total: {formatPrice(getPriceTotal())}</p>
-      </div>      
-
+      </div>   
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-
         <div className={styles.field}>
           <label>Nombre y apellido</label>
           <input 
@@ -49,7 +45,6 @@ export const Checkout = () => {
           />
           {errors.name && <p className={styles.error}>{errors.name.message}</p>}
         </div>
-
         <div className={styles.field}>
           <label>Email</label>
           <input 
@@ -64,48 +59,37 @@ export const Checkout = () => {
           />
           {errors.email && <p className={styles.error}>{errors.email.message}</p>}
         </div>
-
         <div className={styles.field}>
-
           <label>Forma de pago</label>
-
           <select className={styles.select}
             {...register("paymentMethod", {
               required: "Seleccioná una forma de pago",
             })}
           >
             <option value="">Seleccionar...</option>
-
             {paymentMethods.map((method) => (
               <option key={method.value} value={method.value}>
                 {method.label}
               </option>
             ))}
           </select>
-
             {errors.paymentMethod && (
               <p className={styles.error}>
                 {errors.paymentMethod.message}
               </p>
             )}
-
         </div>
-
         <div className={styles.field}>
           <label>Comentarios</label>
           <textarea 
             {...register("message")}
           />
         </div>
-
         <button type="submit" className={styles.button}>
           Finalizar compra
         </button>
-
       </form>
-
     </div>
-
   );
 
 };

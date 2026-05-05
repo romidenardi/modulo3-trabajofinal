@@ -11,14 +11,10 @@ export const Contact = () => {
     reset();
   }
 
-  return (
-    
-    <div className={styles.container}>
-      
+  return (    
+    <div className={styles.container}>      
       <h2 className={styles.title}>Contacto</h2>
-
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-
         <div className={styles.field}>
           <label>Nombre</label>
           <input 
@@ -27,7 +23,6 @@ export const Contact = () => {
           />
           {errors.name && <p className={styles.error}>{errors.name.message}</p>}
         </div>
-
         <div className={styles.field}>
           <label>Email</label>
           <input 
@@ -42,7 +37,6 @@ export const Contact = () => {
           />
           {errors.email && <p className={styles.error}>{errors.email.message}</p>}
         </div>
-
         <div className={styles.field}>
           <label>Mensaje</label>
           <textarea 
@@ -50,15 +44,11 @@ export const Contact = () => {
           />
           {errors.message && <p className={styles.error}>{errors.message.message}</p>}
         </div>
-
         <button type="submit" className={styles.button}>
           Enviar
         </button>
-
       </form>
-
     </div>
-
   );
 
 };

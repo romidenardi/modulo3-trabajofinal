@@ -26,19 +26,13 @@ if (items.length === 0) {
   }
 
   return (
-
     <div className={styles.container}>
-
       <h2 className={styles.title}> </h2>
-      <p>Tu carrito tiene {getItemsTotal()} producto/s</p>        
-
+      <p>Tu carrito tiene {getItemsTotal()} producto/s</p>    
       <div className={styles.list}>
-
         {items.map((item) => (
           <div key={item.id} className={styles.item}>
-
             <h4 className={styles.itemTitle}>{item.title}</h4>
-
             <div className={styles.controls}>
               <button className={styles.button}
                 disabled={item.quantity <= 1}
@@ -49,37 +43,28 @@ if (items.length === 0) {
               <span>{item.quantity}</span>
               <button className={styles.button} onClick={() => changeQuantity(item.id, item.quantity + 1)}>+</button>
             </div>
-
             <p className={styles.price}>
               {formatPrice(item.quantity * item.price)}
             </p>
-
             <button
               className={styles.delete}
               onClick={() => deleteProduct(item.id)}
             >
               ✕
             </button>
-
           </div>
         ))}
       </div>
-
-      <div className={styles.summary}>
-        
-        <strong>Total: {formatPrice(getPriceTotal())}</strong>
-        
+      <div className={styles.summary}>        
+        <strong>Total: {formatPrice(getPriceTotal())}</strong>        
         <button
           className={styles.clear}
           onClick={emptyCart}
         >
           Vaciar carrito
-        </button>
-        
+        </button>        
         <Link className={styles.purchase} to="/checkout">Finalizar compra</Link>
-
       </div>
-
     </div>
   );
 

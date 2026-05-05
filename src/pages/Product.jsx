@@ -76,7 +76,10 @@ export const Product = () => {
               </div>
               <button
                 className={styles.addButton}
-                onClick={() => addProduct(product, quantity)}
+                onClick={() => {
+                  addProduct(product, quantity);
+                  setQuantity(1);
+                }}
               >
                 Agregar al carrito
               </button>

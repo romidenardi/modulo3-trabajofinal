@@ -22,4 +22,5 @@ export const CategorySection = ({ category, title, onAdd }) => {
       />
     </div>
   );
+  
 };

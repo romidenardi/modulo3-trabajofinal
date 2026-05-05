@@ -2,11 +2,7 @@ import {create} from "zustand";
 
 export const useCartStore = create ((set, get) => ({
 
-  //Estado
-
   items: [],
-
-  //Métodos
 
   addProduct: (product, quantity) => set ((state) => {
 
@@ -17,37 +13,29 @@ export const useCartStore = create ((set, get) => ({
         items: state.items.map ((item) => item.id === product.id ? {...item, quantity: item.quantity + quantity} : item,),
       };
     };
-
-    return {
-      items: [...state.items, {...product, quantity}],
-    };
-    
-  }),
+      return {
+        items: [...state.items, {...product, quantity}],
+      };    
+    }),
 
   deleteProduct: (productId) => set ((state) => ({
-
     items: state.items.filter ((item) => item.id !== productId),
-
   })),
 
   changeQuantity: (productId, quantity) => set ((state) => ({
-
     items: state.items.map ((item) =>  item.id === productId ? {...item, quantity: quantity} : item,),
-
   })),
 
   emptyCart: () => set ({items: []}),
 
   getItemsTotal: () => {
-
     const state = get();
-      return state.items.reduce((accumulator, item) => accumulator + item.quantity, 0,
+    return state.items.reduce((accumulator, item) => accumulator + item.quantity, 0,
     )},
 
   getPriceTotal: () => {
-
     const state = get();
-      return state.items.reduce((accumulator,item) => accumulator + item.price * item.quantity, 0,
-    )},
+    return state.items.reduce((accumulator,item) => accumulator + item.price * item.quantity, 0,
+  )},
 
 }));

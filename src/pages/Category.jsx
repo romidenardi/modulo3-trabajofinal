@@ -9,6 +9,7 @@ import { Products } from "../components/Products";
 import styles from "./Category.module.css";
 
 export const Category = () => {
+
   const { category } = useParams();
 
   const exists = categories.some(cat => cat.value === category);
@@ -48,21 +49,24 @@ export const Category = () => {
   }
 
   return (
-
     <div>
-
       <h2 className={styles.categoryTitle}>{getCategoryLabel(category)}</h2>
-
       <input className={styles.input}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Buscar producto"
       />
-
-      <Products
-        products={filtered}
-        onAdd={addProduct}
-      />
+      {filtered.length === 0 ? (
+        <p className={styles.empty}>
+          No encontramos resultados para "<strong>{search}</strong>"
+        </p>
+      ) : (
+        <Products
+          products={filtered}
+          onAdd={addProduct}
+        />
+      )}
     </div>
   );
+
 };

@@ -11,7 +11,6 @@ export const Home = () => {
   return (
     <div>
       <h1 className={styles.mainTitle}>¡Bienvenida a Girlie!</h1>
-
       {categories.map((cat) => (
         <CategorySection
           key={cat.value}
@@ -22,4 +21,5 @@ export const Home = () => {
       ))}
     </div>
   );
+  
 };

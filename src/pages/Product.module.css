@@ -51,6 +51,16 @@
   line-height: 1.5;
 }
 
+.controls button {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .addButton {
   background-color: var(--primary);
   color: white;
