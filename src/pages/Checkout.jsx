@@ -6,7 +6,7 @@ import { useCartStore } from "../store/cartStore";
 import { formatPrice } from "../helpers/formatPrice";
 import styles from "./Checkout.module.css";
 
-export const Checkout = () => {
+export default function Checkout() {
 
   const items = useCartStore ((state) => state.items);
   const getItemsTotal = useCartStore ((state) => state.getItemsTotal);

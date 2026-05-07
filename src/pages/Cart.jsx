@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { formatPrice } from "../helpers/formatPrice";
 import styles from "./Cart.module.css";
 
-export const Cart = () => {
+export default function Cart() {
 
   const items = useCartStore ((state) => state.items);
   const deleteProduct = useCartStore ((state) => state.deleteProduct);

@@ -23,18 +23,30 @@ function App() {
       <Header/>
       <main>
         <Nav/>
-        <Suspense fallback={<p>Cargando...</p>}>
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/categoria/:category" element={<Category/>}/>
-            <Route path="/carrito" element={<Cart/>}/>
-            <Route path="/checkout" element={<Checkout/>}/>
-            <Route path="/gracias" element={<ThankYou/>}/>
-            <Route path="/producto" element={<Product/>}/>
-            <Route path="/contacto" element={<Contact/>}/>
-            <Route path="*" element={<NotFound/>} />
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/categoria/:category" element={<Category/>}/>
+          <Route
+            path="/carrito"
+            element={
+              <Suspense fallback={<p>Cargando carrito...</p>}>
+                <Cart />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <Suspense fallback={<p>Redirigiendo al checkout...</p>}>
+                <Checkout />
+              </Suspense>
+            }
+          />
+          <Route path="/gracias" element={<ThankYou/>}/>
+          <Route path="/producto" element={<Product/>}/>
+          <Route path="/contacto" element={<Contact/>}/>
+          <Route path="*" element={<NotFound/>} />
+        </Routes>
       </main>
       <Footer/>
     </BrowserRouter>
