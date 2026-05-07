@@ -18,10 +18,11 @@
 }
 
 .image {
-  width: 100%;
+  width: 180px;
   height: 180px;
   object-fit: contain;
 }
+
 .title {
   font-size: 1rem;
   font-weight: 600;

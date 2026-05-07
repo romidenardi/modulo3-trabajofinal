@@ -15,10 +15,7 @@ export const ProductCard = ({product, onAdd}) => {
         src={product.images?.[0]}
         alt={product.title}
         className={styles.image}
-        width={300}
-        height={300}
-        fetchpriority="high"
-        loading="eager"
+        loading="lazy"
       />
       <h3 className={styles.title}>{product.title}</h3>
       <p className={styles.price}>{formatPrice(product.price)}</p>

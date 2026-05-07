@@ -54,8 +54,6 @@ export const Product = () => {
               src={product.images?.[0]}
               alt={product.title}
               className={styles.image}
-              width={300}
-              height={300}
               loading="lazy"
             />
           </div>
