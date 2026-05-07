@@ -35,7 +35,7 @@ export const useCartStore = create ((set, get) => ({
 
   getPriceTotal: () => {
     const state = get();
-    return state.items.reduce((accumulator,item) => accumulator + item.price * item.quantity, 0,
+    return state.items.reduce((accumulator,item) => accumulator + (item.price || 0) * item.quantity, 0,
   )},
 
 }));

@@ -51,10 +51,11 @@ export const Product = () => {
         <div className={styles.card}>
           <div className={styles.imageContainer}>
             <img
-              src={product.images?.[0]}
+              src={product.images?.[0] + "?w=200"}
               alt={product.title}
               className={styles.image}
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div className={styles.info}>

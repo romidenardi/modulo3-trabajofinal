@@ -1,12 +1,13 @@
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Nav } from "./components/Nav";
 import { Products } from "./components/Products";
-import { Cart } from "./pages/Cart";
+const Cart = lazy(() => import("./pages/Cart"));
 import { Category } from "./pages/Category";
-import { Checkout } from "./pages/Checkout";
+const Checkout = lazy(() => import("./pages/Checkout"));
 import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
@@ -22,16 +23,18 @@ function App() {
       <Header/>
       <main>
         <Nav/>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/categoria/:category" element={<Category/>}/>
-          <Route path="/carrito" element={<Cart/>}/>
-          <Route path="/checkout" element={<Checkout/>}/>
-          <Route path="/gracias" element={<ThankYou/>}/>
-          <Route path="/producto" element={<Product/>}/>
-          <Route path="/contacto" element={<Contact/>}/>
-          <Route path="*" element={<NotFound/>} />
-        </Routes>
+        <Suspense fallback={<p>Cargando...</p>}>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/categoria/:category" element={<Category/>}/>
+            <Route path="/carrito" element={<Cart/>}/>
+            <Route path="/checkout" element={<Checkout/>}/>
+            <Route path="/gracias" element={<ThankYou/>}/>
+            <Route path="/producto" element={<Product/>}/>
+            <Route path="/contacto" element={<Contact/>}/>
+            <Route path="*" element={<NotFound/>} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer/>
     </BrowserRouter>

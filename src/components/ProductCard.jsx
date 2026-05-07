@@ -5,17 +5,18 @@ import { useCartStore } from "../store/cartStore";
 import { formatPrice } from "../helpers/formatPrice";
 import styles from "./ProductCard.module.css";
 
-export const ProductCard = ({product, onAdd}) => {
+export const ProductCard = React.memo(({product, onAdd}) => {
 
   const [quantity, setQuantity] = useState(1);
 
   return (
     <div className={styles.card}>
       <img
-        src={product.images?.[0]}
+        src={product.images?.[0] + "?w=200"}
         alt={product.title}
         className={styles.image}
         loading="lazy"
+        decoding="async"
       />
       <h3 className={styles.title}>{product.title}</h3>
       <p className={styles.price}>{formatPrice(product.price)}</p>
@@ -52,4 +53,4 @@ export const ProductCard = ({product, onAdd}) => {
     </div>
   );
 
-};
+});
