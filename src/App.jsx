@@ -20,7 +20,8 @@ function App() {
   return (
     <BrowserRouter>
       <Header/>
-      <Nav/>
+      <main>
+        <Nav/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/categoria/:category" element={<Category/>}/>
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contacto" element={<Contact/>}/>
           <Route path="*" element={<NotFound/>} />
         </Routes>
+      </main>
       <Footer/>
     </BrowserRouter>
   );

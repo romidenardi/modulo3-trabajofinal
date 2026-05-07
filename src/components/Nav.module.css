@@ -29,6 +29,10 @@
   display: inline-block;
 }
 
+.cartBag {
+  width: 30px;
+  height: 30px;
+}
 .cartBadge { 
   position: absolute; 
   top: -4px; 

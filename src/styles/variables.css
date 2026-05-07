@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
-  --primary: #2EC4B6;
-  --primary-light: #6FE7DD;
-  --primary-dark: #1B9AAA;
+  --primary: #1FA89A;  
+  --primary-light: #4FD6C8; 
+  --primary-dark: #0F6F66;
 
-  --accent: #F72585;
-  --accent-hover: #FF4DA6;
+  --accent: #D81B60;
+  --accent-hover: #B0124E;
 
   --bg: #FFFFFF;
   --bg-soft: #F7F7F7;
